@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+h1{
+    /* border: 1px solid darkblue; */
+    text-align: center;
+    padding: 30px 0;
+    /* 넓이 전체 쓸 떄는 
+    마진으로 중앙으로 보내는 것 의미 없음 */
+}
+ul{
+    /* border: 1px salmon solid; */
+    text-align: center;
+}
+ul li{
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 0 20px;
+        }
+ul li a{
+    display: block;
+    height: 100%;
+    background: blueviolet;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+ul li a .mask{
+width: 240px;
+height: 200px;
+background: rgb(183, 172, 255);
+position: absolute;
+left: 50%;
+top: 100%;
+/* margin-left: -120px; */
+transform: translateX(-50%);
+padding: 50px;
+transition: all 1s;
+opacity: 0;
+}
+ul li a .mask h2{}
+ul li a .mask span{
+    font-size: 14px;
+    display: block;
+}
+ul li a:hover .mask{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    opacity: 1;
+}
